@@ -16,7 +16,9 @@ RSS_CONTENT_STR = str(RSS_CONTENT.content)
 print(RSS_CONTENT.status_code)
 
 # print(RSS_CONTENT_STR)
-URL_REGEX = "https:\/\/(www\.)youtube.com\/watch.[-a-zA-Z0-9@:%._\+~#=]([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)"
+# URL_REGEX = "https:\/\/(www\.)youtube.com\/watch.[-a-zA-Z0-9@:%._\+~#=]([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)"
+URL_REGEX = "^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube(-nocookie)?\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$"
+
 
 URLS = re.findall(URL_REGEX, RSS_CONTENT_STR)
 print(URLS)
