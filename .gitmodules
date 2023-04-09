@@ -1,0 +1,6 @@
+[submodule "New-Pipe-App"]
+	path = New-Pipe-App
+	url = git@github.com:TeamNewPipe/NewPipe.git
+[submodule "YouTube-DL"]
+	path = YouTube-DL
+	url = git@github.com:ytdl-org/youtube-dl.git
