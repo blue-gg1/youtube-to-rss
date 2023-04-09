@@ -12,10 +12,13 @@ print('\r\n')
 # feed_content_str = str(feed_content)
 
 RSS_CONTENT = requests.get(RSS_FEED_LIST['Pauls_Hardware'])
-RSS_CONTENT_STR = str(RSS_CONTENT)
+RSS_CONTENT_STR = str(RSS_CONTENT.content)
 print(RSS_CONTENT.status_code)
 
-print(re.findall("https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)", RSS_CONTENT_STR))
+# print(RSS_CONTENT_STR)
+
+URLS = re.search("https", RSS_CONTENT_STR)
+print(URLS)
 
 
 # RSS_CONTENT = requests.get(RSS_FEED_LIST['Pauls_Hardware'])
