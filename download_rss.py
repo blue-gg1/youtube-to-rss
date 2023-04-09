@@ -17,7 +17,7 @@ print(RSS_CONTENT.status_code)
 
 # print(RSS_CONTENT_STR)
 
-URLS = re.search("https", RSS_CONTENT_STR)
+URLS = re.findall("https", RSS_CONTENT_STR)
 print(URLS)
 
 
